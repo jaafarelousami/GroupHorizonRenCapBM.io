@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association Groupe Horizon | Béni Mellal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 82, 136, 0.8), rgba(0, 82, 136, 0.8)), url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link:hover::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #00a859;
+            margin-top: 2px;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .language-switcher {
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher:hover {
+            transform: scale(1.1);
+        }
+
+        .member-trigger:hover {
+            transform: scale(1.05);
+        }
+        .member-trigger:active {
+            transform: scale(0.98);
+        }
+        .member-trigger span {
+            transition: all 0.3s ease;
+        }
+        .member-trigger:hover span {
+            font-size: 1.05em;
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                    GH
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-blue-800">Groupe Horizon</h1>
+                    <p class="text-xs text-gray-600">Pour le Renforcement des Capacités</p>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+           <nav class="hidden md:flex space-x-8">
+  <a href="#home" class="relative group text-blue-800 font-medium transition-all duration-300 transform hover:scale-105 hover:text-blue-600">
+    Accueil
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+  <a href="#about" class="relative group text-blue-800 font-medium transition-all duration-300 transform hover:scale-105 hover:text-blue-600">
+    Qui sommes-nous
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+  <a href="#actions" class="relative group text-blue-800 font-medium transition-all duration-300 transform hover:scale-105 hover:text-blue-600">
+    Nos projets
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+  <a href="#news" class="relative group text-blue-800 font-medium transition-all duration-300 transform hover:scale-105 hover:text-blue-600">
+    Nouvelles
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+  <a href="#contact" class="relative group text-blue-800 font-medium transition-all duration-300 transform hover:scale-105 hover:text-blue-600">
+    Nous contacter
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+  </a>
+</nav>
+
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-blue-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Language switcher -->
+            <div class="hidden md:flex items-center">
+                <button class="language-switcher bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                    FR
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-blue-800 font-medium">Accueil</a>
+                <a href="#about" class="text-blue-800 font-medium">À propos</a>
+                <a href="#actions" class="text-blue-800 font-medium">Nos actions</a>
+                <a href="#news" class="text-blue-800 font-medium">Actualités</a>
+                <a href="#contact" class="text-blue-800 font-medium">Contact</a>
+                <div class="pt-4 border-t">
+                    <button class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        FR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative w-full h-screen overflow-hidden text-white flex items-center justify-center">
+  <!-- Slider d'images -->
+  <div id="slider" class="absolute inset-0 z-0">
+    <img src="1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700" />
+    <img src="2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700" />
+    <img src="3.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700" />
+    <img src="4.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700" />
+    <img src="5.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700" />
+    <img src="6.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700" />
+    <img src="7.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700" />
+    
+    <!-- Couche sombre pour lisibilité -->
+    <div class="absolute inset-0 bg-blue-900/60"></div>
+  </div>
+
+  <!-- Contenu principal -->
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight drop-shadow-lg">
+      Agir ensemble pour un avenir meilleur
+    </h1>
+    <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
+      Association Groupe Horizon pour le Renforcement des Capacités, Maroc
+    </p>
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+      <a href="#support" class="px-8 py-3 rounded-full font-bold bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+        Nous soutenir
+      </a>
+      <a href="#actions" class="px-8 py-3 rounded-full font-bold bg-white text-blue-800 hover:bg-gray-100 shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+        Nos actions
+      </a>
+    </div>
+  </div>
+
+  <!-- JavaScript intégré -->
+  <script>
+    const images = document.querySelectorAll("#slider img");
+    let index = 0;
+
+    function showImage(i) {
+      images.forEach((img, idx) => {
+        img.style.opacity = idx === i ? "1" : "0";
+      });
+    }
+
+    showImage(index); // Affiche la première image
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      showImage(index);
+    }, 2000); // toutes les 1 seconde
+  </script>
+</section>
+
+
+
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+  <h2 class="group text-3xl font-bold text-blue-800 mb-4 inline-block transition-all duration-300 transform hover:-translate-y-1 relative">
+    À propos de nous
+    <span class="absolute left-1/2 -bottom-1 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </h2>
+  <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+</div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="logo association Officiele couleur  .jpg" alt="Équipe de l'association" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+
+
+
+
+
+
+
+                    <div class="mb-6">
+  <h3 
+    class="text-2xl font-bold text-blue-800 mb-2 cursor-pointer hover:text-blue-600 transition-colors duration-300"
+    onclick="toggleQuiSommesNous()"
+  >
+    Qui sommes-nous ?
+  </h3>
+
+  <div 
+    id="qui-sommes-nous"
+    class="text-gray-700 max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+  >
+    <p class="mt-2">
+      Groupe Horizon pour le Renforcement des Capacités est une association nationale à but non lucratif, créée le 28 août 2010 à Béni Mellal.
+      Elle œuvre depuis plus d'une décennie à renforcer les capacités individuelles et collectives des communautés, en particulier celles vivant en situation de vulnérabilité, à travers des actions de développement, de formation, de sensibilisation et de solidarité.
+    </p>
+    <p class="mt-2">
+      Nous travaillons en étroite collaboration avec les acteurs locaux, les institutions publiques et les associations de terrain pour bâtir des réponses durables aux défis sociaux, sanitaires, éducatifs et économiques.
+    </p>
+  </div>
+</div>
+
+<script>
+  function toggleQuiSommesNous() {
+    const content = document.getElementById("qui-sommes-nous");
+    if (content.classList.contains("max-h-0")) {
+      content.classList.remove("max-h-0");
+      content.classList.add("max-h-[800px]");
+    } else {
+      content.classList.remove("max-h-[800px]");
+      content.classList.add("max-h-0");
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
+                    <div class="mb-6">
+  <h3 class="text-2xl font-bold text-blue-800 mb-2 cursor-pointer hover:text-blue-600 transition-colors duration-300" onclick="togglePrincipes()"> Nos principes</h3>
+
+  <div 
+    id="principes-content"
+    class="text-gray-700 space-y-4 max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+  >
+    <div>
+      <h4 class="font-semibold text-gray-800">Engagement communautaire</h4>
+      <p>Intervenir avec et pour les populations locales, en valorisant leur rôle actif dans le développement.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-gray-800">Solidarité</h4>
+      <p>Placer l’entraide et le soutien mutuel au cœur de nos actions.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-gray-800">Partenariat</h4>
+      <p>Travailler en synergie avec les institutions, ONG et structures communautaires.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-gray-800">Autonomie</h4>
+      <p>Encourager l’auto-organisation et l’autonomisation des individus et des groupes.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-gray-800">Transparence et éthique</h4>
+      <p>Assurer une gestion rigoureuse, responsable et éthique de nos projets et ressources.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePrincipes() {
+    const content = document.getElementById("principes-content");
+    if (content.classList.contains("max-h-0")) {
+      content.classList.remove("max-h-0");
+      content.classList.add("max-h-[1000px]"); // hauteur animée
+    } else {
+      content.classList.remove("max-h-[1000px]");
+      content.classList.add("max-h-0");
+    }
+  }
+</script>
+
+                    
+                    <div class="mb-6">
+  <h3 
+    class="text-2xl font-bold text-blue-800 mb-2 cursor-pointer hover:text-blue-600 transition-colors duration-300"
+    onclick="toggleVision()"
+  >
+    Notre vision
+  </h3>
+  
+  <p 
+    id="vision-text"
+    class="text-gray-700 mt-2 max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+  >
+    Contribuer à une société plus juste, résiliente et solidaire, où chaque individu – 
+    en milieu rural ou urbain – dispose des moyens et des compétences pour agir sur 
+    son environnement, faire valoir ses droits et participer activement au 
+    développement de sa communauté.
+  </p>
+</div>
+
+<script>
+  function toggleVision() {
+    const visionText = document.getElementById("vision-text");
+    if (visionText.classList.contains("max-h-0")) {
+      visionText.classList.remove("max-h-0");
+      visionText.classList.add("max-h-[500px]"); 
+    } else {
+      visionText.classList.remove("max-h-[500px]");
+      visionText.classList.add("max-h-0");
+    }
+  }
+</script>
+
+                    
+
+
+
+
+
+
+
+    <div class="mb-6">
+  <h3 
+    class="text-2xl font-bold text-blue-800 mb-2 cursor-pointer hover:text-blue-600 transition-colors duration-300"
+    onclick="toggleValeursPrincipes()"
+  >
+    Nos valeurs
+  </h3>
+
+  <div 
+    id="valeurs-principes-content"
+    class="text-gray-700 space-y-4 max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+  >
+    <div>
+      <h4 class="font-semibold text-gray-800">Respect de la dignité humaine</h4>
+      <p>Valoriser chaque personne sans discrimination, en mettant l’humain au centre de nos actions.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-gray-800">Équité et justice sociale</h4>
+      <p>Assurer une répartition équitable des ressources et des opportunités pour tous.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-gray-800">Citoyenneté active</h4>
+      <p>Encourager la participation des citoyens à la vie publique et au changement social.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-gray-800">Autonomie</h4>
+      <p>Renforcer la capacité des individus et des groupes à agir de manière indépendante.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-gray-800">Responsabilité collective</h4>
+      <p>Promouvoir l’implication de tous dans la recherche de solutions durables aux défis sociaux.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleValeursPrincipes() {
+    const content = document.getElementById("valeurs-principes-content");
+    if (content.classList.contains("max-h-0")) {
+      content.classList.remove("max-h-0");
+      content.classList.add("max-h-[1000px]");
+    } else {
+      content.classList.remove("max-h-[1000px]");
+      content.classList.add("max-h-0");
+    }
+  }
+</script>
+
+<script>
+  function togglePrincipes() {
+    const content = document.getElementById("principes-content");
+    if (content.classList.contains("max-h-0")) {
+      content.classList.remove("max-h-0");
+      content.classList.add("max-h-[1000px]"); // hauteur animée
+    } else {
+      content.classList.remove("max-h-[1000px]");
+      content.classList.add("max-h-0");
+    }
+  }
+</script>
+
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">12+</div>
+                    <div class="text-gray-300">Projets réalisés</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">150+</div>
+                    <div class="text-gray-300">Bénévoles engagés</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">5K+</div>
+                    <div class="text-gray-300">Bénéficiaires</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">8</div>
+                    <div class="text-gray-300">Partenaires</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- News Section -->
+<section id="news" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+  <h2 class="group text-3xl font-bold text-blue-800 mb-4 inline-block transition-all duration-300 transform hover:-translate-y-1 relative">
+    Actualités
+    <span class="absolute left-1/2 -bottom-1 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </h2>
+  <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+</div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- News 1 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+  <img src="pps.jpg" alt="Actualité" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <div class="text-gray-500 text-sm mb-2">15 Juin 2023</div>
+    <h3 class="text-xl font-bold text-blue-800 mb-3">- PPMS</h3>
+    <p class="text-gray-700 mb-4">Le Plan Particulier de Mise en Sûreté (PPMS) est un outil visant la sécurité des établissements scolaires</p>
+    <button onclick="toggleMore(this)" class="text-green-500 font-medium flex items-center focus:outline-none transition-all duration-300 hover:text-green-700 hover:ml-2">
+      Lire l'article
+      <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+    </button>
+    <div class="more-text max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out mt-3 text-gray-700">
+      Ce dispositif occupe une place importante, il est accompagné de plusieurs exercices d’apprentissages et de simulation. 
+      Chaque année, nous assistant les directeurs d’établissements à concevoir leurs plans pour faire face aux risques naturels, ainsi qu’aux menaces d’attentats ou d’intrusions.
+    </div>
+  </div>
+</div>
+
+
+      <!-- News 2 -->
+     <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+  <img src="33.jpg" alt="Actualité" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-blue-800 mb-3">- Sécurité routière</h3>
+    <p class="text-gray-700 mb-4">
+      Nous travaillons en étroite collaboration avec l’académie régionale de l’éducation et de la formation région BMK et la direction régionale de la sécurité routière de la région BMK
+    </p>
+    <button onclick="toggleMore(this)" class="group text-green-500 font-medium flex items-center focus:outline-none transition-all duration-300 hover:text-green-700">
+      Lire l'article
+      <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+    </button>
+    <div class="more-text max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out mt-3 text-gray-700">
+      . Nous visant à éduquer, sensibiliser et informer les usagers de la route sur les risques et les facteurs d’accidents. Elle concerne aussi bien les enfants et les jeunes scolarisés que les conducteurs de véhicules motorisés, les cyclistes et les piétons.
+    </div>
+  </div>
+</div>
+
+
+      <!-- News 3 -->
+     <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+  <img src="22.jpg" alt="Actualité" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-blue-800 mb-3">- Santé</h3>
+    <p class="text-gray-700 mb-4">
+      Chaque année, notre Association mène des actions médicales
+    </p>
+    <button onclick="toggleMore(this)" class="group text-green-500 font-medium flex items-center focus:outline-none transition-all duration-300 hover:text-green-700">
+      Lire l'article
+      <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+    </button>
+    <div class="more-text max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out mt-3 text-gray-700">
+      de sensibilisation et d’actions sociales au profit des personnes en situation de précarité dans les zones rurales et marginalisées. Aussi des activités de sensibilisants dans les établissements scolaires de la région BMK.
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleMore(button) {
+    const moreText = button.nextElementSibling;
+    const isHidden = moreText.classList.contains("max-h-0");
+
+    if (isHidden) {
+      moreText.classList.remove("max-h-0", "opacity-0");
+      moreText.classList.add("max-h-40", "opacity-100");
+      button.innerHTML = 'Réduire <i class="fas fa-chevron-up ml-2"></i>';
+    } else {
+      moreText.classList.remove("max-h-40", "opacity-100");
+      moreText.classList.add("max-h-0", "opacity-0");
+      button.innerHTML = 'Lire l\'article <i class="fas fa-arrow-right ml-2"></i>';
+    }
+  }
+</script>
+
+         <!--   
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Voir toutes les actualités
+                </a>
+            </div>
+          -->  
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+  <h2 class="group text-3xl font-bold text-blue-800 mb-4 inline-block transition-all duration-300 transform hover:-translate-y-1 relative">
+    Nous soutenir
+    <span class="absolute left-1/2 -bottom-1 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </h2>
+  <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+</div>
+
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6">Devenir membre</h3>
+                    <p class="text-gray-700 mb-6">Rejoignez notre communauté engagée et contribuez activement à nos projets de développement local.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="bg-green-100 p-1 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Participation aux décisions de l'association</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-green-100 p-1 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Accès privilégié à nos événements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-green-100 p-1 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Formations gratuites</span>
+                        </li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9ao-MTUSMNGPfIqVMpzzDGBfu2tIE28x_pZ43bPKVEYID4g/viewform?usp=dialog" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                        Adhérer maintenant
+                    </a>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-8">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6">Faire un don</h3>
+                    <p class="text-gray-700 mb-6">Votre soutien financier nous permet de mener à bien nos projets et d'élargir notre impact.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <div class="text-2xl font-bold text-blue-800 mb-2">200 DH</div>
+                            <p class="text-gray-700 text-sm">Achat de matériel scolaire pour 1 enfant</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <div class="text-2xl font-bold text-blue-800 mb-2">500 DH</div>
+                            <p class="text-gray-700 text-sm">Formation d'un jeune en compétences numériques</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <div class="text-2xl font-bold text-blue-800 mb-2">1000 DH</div>
+                            <p class="text-gray-700 text-sm">Campagne de sensibilisation dans un village</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <div class="text-2xl font-bold text-blue-800 mb-2">Autre</div>
+                            <p class="text-gray-700 text-sm">Montant libre</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                       
+                        <a href="https://wa.me/212642191069" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-full text-center transition duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+           <div class="text-center mb-12">
+  <h2 class="group text-3xl font-bold text-blue-800 mb-4 inline-block transition-all duration-300 transform hover:-translate-y-1 relative">
+    ACTIONS & ÉQUIPES
+    <span class="absolute left-1/2 -bottom-1 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </h2>
+  <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+</div>
+
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Equipe 1 -->
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Innovation Robotique et Intelligence Artificielle</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Jaafar Elousami -->
+                        <div>
+                            <div class="flex items-center space-x-3 cursor-pointer member-trigger" data-target="jaafar">
+                                <img src="https://via.placeholder.com/50x50?text=Jaafar" alt="Jaafar Elousami" class="w-10 h-10 rounded-full object-cover">
+                                <span class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">Jaafar Elousami</span>
+                            </div>
+                            <div id="jaafar" class="member-details hidden mt-2 ml-13 pl-1 text-sm text-gray-600">
+                                
+                            </div>
+                        </div>
+
+                        <!-- Yassin Aboubaker -->
+                        <div>
+                            <div class="flex items-center space-x-3 cursor-pointer member-trigger" data-target="yassin">
+                                <img src="https://via.placeholder.com/50x50?text=Yassin" alt="Yassin Aboubaker" class="w-10 h-10 rounded-full object-cover">
+                                <span class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">Yassin Aboubaker</span>
+                            </div>
+                            <div id="yassin" class="member-details hidden mt-2 ml-13 pl-1 text-sm text-gray-600">
+                                
+                            </div>
+                        </div>
+
+                        
+                        <!-- Other members (to be filled later) -->
+                        <div>
+                            <div class="flex items-center space-x-3 cursor-pointer member-trigger" data-target="soufian">
+                                <img src="https://via.placeholder.com/50x50?text=Soufian" alt="Soufian Ameskan" class="w-10 h-10 rounded-full object-cover">
+                                <span class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">Soufian Ameskan</span>
+                            </div>
+                            <div id="soufian" class="member-details hidden mt-2 ml-13 pl-1 text-sm text-gray-600">
+                                <ul class="list-disc pl-5">
+                                    <!-- Add details here when available -->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center space-x-3 cursor-pointer member-trigger" data-target="yehya">
+                                <img src="https://via.placeholder.com/50x50?text=Yehya" alt="Yehya Mahboub" class="w-10 h-10 rounded-full object-cover">
+                                <span class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">Yehya Mahboub</span>
+                            </div>
+                            <div id="yehya" class="member-details hidden mt-2 ml-13 pl-1 text-sm text-gray-600">
+                                <ul class="list-disc pl-5">
+                                    <!-- Add details here when available -->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center space-x-3 cursor-pointer member-trigger" data-target="bahri">
+                                <img src="https://via.placeholder.com/50x50?text=Mohamed" alt="Mohamed El Bahri" class="w-10 h-10 rounded-full object-cover">
+                                <span class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">Mohamed El Bahri</span>
+                            </div>
+                            <div id="bahri" class="member-details hidden mt-2 ml-13 pl-1 text-sm text-gray-600">
+                                <ul class="list-disc pl-5">
+                                    <!-- Add details here when available -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+
+                
+                <!-- Equipe 2 -->
+                
+
+
+
+
+<div class="relative bg-blue-50 p-6 rounded-lg max-w-md overflow-hidden">
+
+  <!-- Image de fond -->
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-60"
+    style="background-image: url('catastrophes.png');"
+  ></div>
+
+  <!-- Contenu par-dessus -->
+  <div class="relative z-10 text-gray-800">
+    <h3
+      class="text-xl font-bold mb-4 cursor-pointer transition duration-300 hover:text-blue-600 hover:scale-105"
+      onclick="toggleMembres()"
+    >
+      Gestion de Catastrophes
+    </h3>
+
+    <div
+      id="noms-membres"
+      class="space-y-2 max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+    >
+   
+      <div>
+        Nous agissons pour prévenir, réduire ou transférer les impacts des sinistres grâce à des mesures de prévention et de préparation.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleMembres() {
+    const div = document.getElementById('noms-membres');
+    if (div.classList.contains('max-h-0')) {
+      div.classList.remove('max-h-0');
+      div.classList.add('max-h-40', 'mt-2');
+    } else {
+      div.classList.remove('max-h-40', 'mt-2');
+      div.classList.add('max-h-0');
+    }
+  }
+</script>
+
+
+                
+                <!-- Equipe 3 -->
+
+
+
+
+
+
+
+<div class="relative bg-blue-50 p-6 rounded-lg max-w-md overflow-hidden">
+  <!-- Image de fond -->
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-60"
+    style="background-image: url('migration.png');"
+  ></div>
+
+  <!-- Contenu au-dessus -->
+  <div class="relative z-10 text-gray-800">
+    <h3 
+      class="text-xl font-bold mb-4 cursor-pointer transition duration-300 hover:text-blue-600 hover:scale-105"
+      onclick="toggleBloc('membres-migration')"
+    >
+      Migration
+    </h3>
+
+    <div 
+      id="membres-migration"
+      class="space-y-2 max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+    >
+     
+      <div>
+        Nous visons à formuler des solutions légales, réalisables, accessibles et fondées sur les meilleures preuves disponibles.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleBloc(id) {
+    const el = document.getElementById(id);
+    if (el.classList.contains('max-h-0')) {
+      el.classList.remove('max-h-0');
+      el.classList.add('max-h-40', 'mt-2');
+    } else {
+      el.classList.remove('max-h-40', 'mt-2');
+      el.classList.add('max-h-0');
+    }
+  }
+</script>
+
+
+
+
+
+
+
+                <!-- Equipe 4 -->
+  <div class="relative bg-blue-50 p-6 rounded-lg max-w-md overflow-hidden">
+  <!-- Image de fond -->
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-60"
+    style="background-image: url('santé.png');"
+  ></div>
+
+  <!-- Contenu par-dessus -->
+  <div class="relative z-10">
+    <!-- Titre cliquable avec effet hover -->
+    <h3
+      class="text-xl font-bold text-blue-800 mb-4 cursor-pointer transition duration-300 hover:text-blue-600 hover:scale-105"
+      onclick="toggleSmooth(this.nextElementSibling)"
+    >
+      santé communautaire
+    </h3>
+
+    <!-- Contenu caché avec nouvelle animation -->
+    <div
+      class="grid grid-cols-1 gap-4 text-gray-700 transition-all duration-500 ease-in-out transform"
+      style="max-height: 0; opacity: 0; transform: translateY(-10px); overflow: hidden;"
+    >
+      <div>
+        Nos actions en santé communautaire reposent sur la participation des habitants à chaque étape du programme.
+        La collaboration entre communautés.
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <!-- Membre (vide pour l’instant) -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleSmooth(element) {
+    if (element.style.maxHeight && element.style.maxHeight !== "0px") {
+      element.style.maxHeight = "0px";
+      element.style.opacity = "0";
+      element.style.transform = "translateY(-10px)";
+      element.style.marginTop = "0";
+    } else {
+      element.style.maxHeight = element.scrollHeight + "px";
+      element.style.opacity = "1";
+      element.style.transform = "translateY(0)";
+      element.style.marginTop = "1rem";
+    }
+  }
+</script>
+
+
+                <!-- Equipe 5 -->
+               
+                
+<div class="relative bg-blue-50 p-6 rounded-lg max-w-md overflow-hidden">
+  <!-- Image de fond -->
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-60"
+    style="background-image: url('https://www.crise-up.com/media/k2/items/cache/88f135a483ef01fac8d7b920488085e4_XL.jpg');"
+  ></div>
+
+  <!-- Contenu au-dessus -->
+  <div class="relative z-10">
+    <!-- Titre cliquable -->
+    <h3
+      class="text-xl font-bold text-blue-800 mb-4 cursor-pointer transition duration-300 hover:text-blue-600 hover:scale-105"
+      onclick="toggleSmooth(this.nextElementSibling)"
+    >
+      Soutien Psychosocial
+    </h3>
+
+    <!-- Contenu masqué -->
+    <div
+      class="space-y-4 text-gray-700 transition-all duration-500 ease-in-out transform"
+      style="max-height: 0; opacity: 0; transform: translateY(-10px); overflow: hidden;"
+    >
+      <div>
+        Nous apportons un soutien psychologique et social pour aider les personnes touchées à surmonter le stress, le traumatisme, le deuil et reconstruire le lien social.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleSmooth(element) {
+    if (element.style.maxHeight && element.style.maxHeight !== "0px") {
+      element.style.maxHeight = "0px";
+      element.style.opacity = "0";
+      element.style.transform = "translateY(-10px)";
+      element.style.marginTop = "0";
+    } else {
+      element.style.maxHeight = element.scrollHeight + "px";
+      element.style.opacity = "1";
+      element.style.transform = "translateY(0)";
+      element.style.marginTop = "1rem";
+    }
+  }
+</script>
+
+
+
+                <!-- Equipe 6 -->
+                <div class="relative bg-blue-50 p-6 rounded-lg max-w-md overflow-hidden">
+  <!-- Image de fond -->
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-60"
+    style="background-image: url('WhatsApp\ Image\ 2025-07-12\ à\ 17.56.19_1576fc05.jpg');"
+  ></div>
+
+  <!-- Contenu au-dessus de l’image -->
+  <div class="relative z-10">
+    <!-- Titre cliquable -->
+    <h3 class="toggle-title text-xl font-bold text-blue-800 mb-4 cursor-pointer transition duration-300 hover:text-blue-600 hover:scale-105">
+      Sécurité
+    </h3>
+
+    <!-- Contenu masqué au départ -->
+    <div class="toggle-content max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out space-y-4 text-gray-800">
+      
+      <!-- Description -->
+      <div>
+        Nous renforçons la sécurité en milieu scolaire grâce aux plans PPMS, et menons des actions de prévention routière pour limiter les accidents liés à la fatigue ou au manque de vigilance.
+      </div>
+      
+      <!-- Membre (ajoute le nom si tu veux) -->
+      <div class="flex items-center space-x-3">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.toggle-title').forEach(title => {
+    title.addEventListener('click', () => {
+      const content = title.nextElementSibling;
+      const isCollapsed = content.classList.contains('max-h-0');
+
+      if (isCollapsed) {
+        content.classList.remove('max-h-0', 'opacity-0');
+        content.classList.add('max-h-[500px]', 'opacity-100');
+      } else {
+        content.classList.remove('max-h-[500px]', 'opacity-100');
+        content.classList.add('max-h-0', 'opacity-0');
+      }
+    });
+  });
+</script>
+
+
+                <!-- Equipe 7 -->
+              <div class="relative bg-blue-50 p-6 rounded-lg max-w-md overflow-hidden">
+  <!-- Image de fond -->
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-60"
+    style="background-image: url('formation.webp');"
+  ></div>
+
+  <!-- Contenu par-dessus l’image -->
+  <div class="relative z-10">
+    <!-- Titre cliquable -->
+    <h3 
+      class="toggle-title text-xl font-bold text-blue-800 mb-4 cursor-pointer transition duration-300 hover:text-blue-600 hover:scale-105"
+    >
+      Formations
+    </h3>
+
+    <!-- Contenu masqué au départ -->
+    <div 
+      class="toggle-content max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out space-y-4 text-gray-800"
+    >
+      <!-- Description -->
+      <div>
+        Le renforcement des capacités et la formation font partie intégrante de la mission de notre association dans divers domaines.
+      </div>
+
+      <!-- Membre (facultatif) -->
+      <div class="flex items-center space-x-3">
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.toggle-title').forEach(title => {
+    title.addEventListener('click', () => {
+      const content = title.nextElementSibling;
+      const isVisible = content.classList.contains('max-h-0');
+
+      if (isVisible) {
+        content.classList.remove('max-h-0', 'opacity-0');
+        content.classList.add('max-h-[500px]', 'opacity-100');
+      } else {
+        content.classList.remove('max-h-[500px]', 'opacity-100');
+        content.classList.add('max-h-0', 'opacity-0');
+      }
+    });
+  });
+</script>
+
+
+                <!--   action et loisire  -->
+
+
+   <div class="relative bg-blue-50 p-6 rounded-lg max-w-md overflow-hidden">
+  <!-- Image de fond -->
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-60"
+    style="background-image: url('WhatsApp\ Image\ 2025-07-12\ à\ 17.56.17_7779e610.jpg');"
+  ></div>
+
+  <!-- Contenu au-dessus -->
+  <div class="relative z-10">
+    <!-- Titre cliquable -->
+    <h3 class="toggle-title text-xl font-bold text-blue-800 mb-4 cursor-pointer transition duration-300 hover:text-blue-600 hover:scale-105">
+      Loisirs et activités
+    </h3>
+
+    <!-- Contenu masqué -->
+    <div class="toggle-content grid grid-cols-2 gap-4 overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out text-gray-800">
+      <div class="flex items-center space-x-3 col-span-2">
+        Nous organisons des activités ludiques, sportives et culturelles pour renforcer la cohésion, créer du lien et offrir des moments de détente à tous.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.toggle-title').forEach(title => {
+    title.addEventListener('click', () => {
+      const content = title.nextElementSibling;
+      if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        content.style.maxHeight = '0px';
+        content.style.opacity = 0;
+        content.style.marginTop = 0;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = 1;
+        content.style.marginTop = '1rem';
+      }
+    });
+  });
+</script>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+  <h2 class="group text-3xl font-bold text-blue-800 mb-4 inline-block transition-all duration-300 transform hover:-translate-y-1 relative cursor-pointer">
+    Nos partenaires
+    <span class="absolute left-1/2 -bottom-1 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </h2>
+  <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+</div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Partenaire (réutilisable) -->
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-white p-6 rounded-lg shadow-sm relative overflow-hidden cursor-pointer group">
+  <!-- Image en fond via div -->
+  <div 
+    class="absolute inset-0 bg-center bg-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300"
+    style="background-image: url('image1.jpg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenu au-dessus -->
+  <h3 class="partner-title text-lg font-semibold text-blue-800 transition duration-300 group-hover:text-blue-600 relative z-10">
+    Ministère de l'Éducation Nationale au Maroc
+  </h3>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Dupliquer ce bloc pour les autres partenaires -->
+   
+      
+
+
+
+
+
+<div class="bg-white p-6 rounded-lg shadow-sm relative overflow-hidden cursor-pointer group">
+  <!-- Image en fond -->
+  <div
+    class="absolute inset-0 bg-center bg-cover opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+    style="background-image: url('image2.jpg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenu au-dessus -->
+  <h3 class="partner-title text-lg font-semibold text-blue-800 transition duration-300 group-hover:text-blue-600 relative z-10 cursor-pointer">
+   
+  </h3>
+  <div class="partner-content mt-4 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out relative z-10">
+    <span class="text-sm text-gray-500 block text-center"></span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Répète pour Partenaire 3 à 6... -->
+   
+
+
+
+
+
+
+
+
+
+<div class="bg-white p-6 rounded-lg shadow-sm relative overflow-hidden cursor-pointer group">
+  <!-- Image en fond -->
+  <div
+    class="absolute inset-0 bg-center bg-cover opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+    style="background-image: url('image3.jpg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenu au-dessus -->
+  <h3 class="partner-title text-lg font-semibold text-blue-800 transition duration-300 group-hover:text-blue-600 relative z-10 cursor-pointer">
+    Croissant-Rouge marocain
+  </h3>
+  <div class="partner-content mt-4 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out relative z-10">
+    <span class="text-sm text-gray-500 block text-center"></span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+      <!-- Partenaire 4 -->
+      
+
+
+
+
+
+
+
+<div class="bg-white p-6 rounded-lg shadow-sm relative overflow-hidden cursor-pointer group">
+  <!-- Image en fond -->
+  <div
+    class="absolute inset-0 bg-center bg-cover opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+    style="background-image: url('image4.jpg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenu au-dessus -->
+  <h3 class="partner-title text-lg font-semibold text-blue-800 transition duration-300 group-hover:text-blue-600 relative z-10 cursor-pointer">
+    Najib Lab
+  </h3>
+  <div class="partner-content mt-4 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out relative z-10">
+    <span class="text-sm text-gray-500 block text-center"></span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Partenaire 5 -->
+   
+
+
+
+
+
+
+<div class="bg-white p-6 rounded-lg shadow-sm relative overflow-hidden cursor-pointer group">
+  <!-- Image en fond -->
+  <div
+    class="absolute inset-0 bg-center bg-cover opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+    style="background-image: url('image5.jpg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenu au-dessus -->
+  <h3 class="partner-title text-lg font-semibold text-blue-800 transition duration-300 group-hover:text-blue-600 relative z-10 cursor-pointer">
+    
+  </h3>
+  <div class="partner-content mt-4 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out relative z-10">
+    <span class="text-sm text-gray-500 block text-center"></span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+      <!-- Partenaire 6 -->
+      <div class="bg-white p-6 rounded-lg shadow-sm relative overflow-hidden cursor-pointer group">
+  <!-- Image en fond -->
+  <div
+    class="absolute inset-0 bg-center bg-cover opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+    style="background-image: url('image7.jpg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenu au-dessus -->
+  <h3 class="partner-title text-lg font-semibold text-blue-800 transition duration-300 group-hover:text-blue-600 relative z-10 cursor-pointer">
+    Nasmo
+  </h3>
+  <div class="partner-content mt-4 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out relative z-10">
+    <span class="text-sm text-gray-500 block text-center"></span>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Permet d'afficher/masquer chaque partenaire individuellement
+  document.querySelectorAll('.partner-title').forEach(title => {
+    title.addEventListener('click', () => {
+      const content = title.nextElementSibling;
+      const isOpen = content.classList.contains('max-h-0');
+
+      if (isOpen) {
+        content.classList.remove('max-h-0', 'opacity-0');
+        content.classList.add('max-h-[300px]', 'opacity-100');
+      } else {
+        content.classList.remove('max-h-[300px]', 'opacity-100');
+        content.classList.add('max-h-0', 'opacity-0');
+      }
+    });
+  });
+</script>
+
+ <!-- Galerie avec slider infini et agrandissement modal -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">Galerie</h2>
+      <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+    </div>
+
+    <div class="relative overflow-hidden">
+      <!-- Flèches de navigation -->
+      <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-blue-800 text-white p-3 rounded-full shadow hover:bg-blue-900 transition duration-300">
+        &#8592;
+      </button>
+      <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-blue-800 text-white p-3 rounded-full shadow hover:bg-blue-900 transition duration-300">
+        &#8594;
+      </button>
+
+      <!-- Carousel d’images -->
+      <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+        <div class="min-w-full flex-shrink-0 px-2">
+          <img src="imgscal1.png" class="zoomable rounded-lg w-full h-64 object-cover transform hover:scale-105 transition duration-500 cursor-pointer" />
+        </div>
+        <div class="min-w-full flex-shrink-0 px-2">
+          <img src="imgscal2.png" class="zoomable rounded-lg w-full h-64 object-cover transform hover:scale-105 transition duration-500 cursor-pointer" />
+        </div>
+        <div class="min-w-full flex-shrink-0 px-2">
+          <img src="4.jpg" class="zoomable rounded-lg w-full h-64 object-cover transform hover:scale-105 transition duration-500 cursor-pointer" />
+        </div>
+        <div class="min-w-full flex-shrink-0 px-2">
+          <img src="5.jpg" class="zoomable rounded-lg w-full h-64 object-cover transform hover:scale-105 transition duration-500 cursor-pointer" />
+        </div>
+        <div class="min-w-full flex-shrink-0 px-2">
+          <img src="6.jpg" class="zoomable rounded-lg w-full h-64 object-cover transform hover:scale-105 transition duration-500 cursor-pointer" />
+        </div>
+        <div class="min-w-full flex-shrink-0 px-2">
+          <img src="7.jpg" class="zoomable rounded-lg w-full h-64 object-cover transform hover:scale-105 transition duration-500 cursor-pointer" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal agrandi -->
+<div id="zoomModal" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+  <div class="relative w-3/4 md:w-1/2 max-h-[80vh]">
+    <button id="closeZoom" class="absolute top-2 right-2 text-white text-3xl font-bold cursor-pointer z-50">&times;</button>
+    <img id="zoomedImage" src="" class="w-full max-h-[80vh] object-contain rounded-lg shadow-lg" />
+  </div>
+</div>
+
+<style>
+  #carousel {
+    /* scroll-snap est optionnel ici, le slide est géré en transform */
+    scroll-snap-type: x mandatory;
+  }
+  #carousel > div {
+    scroll-snap-align: start;
+  }
+
+  #zoomModal { opacity: 0; pointer-events: none; }
+  #zoomModal.show { opacity: 1; pointer-events: auto; }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('carousel');
+    const next = document.getElementById('next');
+    const prev = document.getElementById('prev');
+
+    let currentIndex = 0;
+
+    const getSlideWidth = () => carousel.children[0].offsetWidth; // largeur du conteneur ENTIER (avec padding)
+
+    function updateCarousel() {
+      const w = getSlideWidth();
+      carousel.style.transform = `translate3d(-${currentIndex * w}px, 0, 0)`;
+    }
+
+    next.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % carousel.children.length;
+      updateCarousel();
+    });
+
+    prev.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + carousel.children.length) % carousel.children.length;
+      updateCarousel();
+    });
+
+    // Recalcule en cas de redimensionnement (évite les décalages)
+    window.addEventListener('resize', updateCarousel);
+
+    // Swipe mobile
+    let startX = null;
+    carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+    carousel.addEventListener('touchend', e => {
+      const endX = e.changedTouches[0].clientX;
+      if (startX === null) return;
+      if (startX - endX > 50) next.click();
+      if (endX - startX > 50) prev.click();
+      startX = null;
+    });
+
+    // Zoom modal
+    const zoomModal = document.getElementById('zoomModal');
+    const zoomedImage = document.getElementById('zoomedImage');
+    const closeZoom = document.getElementById('closeZoom');
+
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.addEventListener('click', () => {
+        zoomedImage.src = img.src;
+        zoomModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeZoom.addEventListener('click', () => {
+      zoomModal.classList.remove('show');
+      document.body.style.overflow = '';
+    });
+
+    zoomModal.addEventListener('click', e => {
+      if (e.target === zoomModal) {
+        zoomModal.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Positionne correctement au chargement
+    updateCarousel();
+  });
+</script>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Restez informés</h2>
+                <p class="mb-8">Abonnez-vous à notre newsletter pour recevoir nos dernières actualités et opportunités de bénévolat.</p>
+                
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Votre email" class="flex-grow px-4 py-3 rounded-full text-gray-800 focus:outline-none">
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 font-bold px-6 py-3 rounded-full transition duration-300">
+                        S'abonner
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Contactez-nous</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6">Nos coordonnées</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Adresse</h4>
+                                <p class="text-gray-700"> Siège provisoire de l’association : 
+Maison des jeunes AL MAGHRIB EL ARABI   ,  Beni Mellal khénifra</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Email</h4>
+                                <p class="text-gray-700">groupehorizonmaroc@gmail.com </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Téléphone</h4>
+                                <p class="text-gray-700">06 62 09 24 25</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fab fa-whatsapp text-blue-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-800">WhatsApp</h4>
+                                <p class="text-gray-700">06 62 09 24 25</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-blue-800 mb-4">Suivez-nous</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-800 hover:bg-blue-200 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-800 hover:bg-blue-200 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-800 hover:bg-blue-200 transition duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-800 hover:bg-blue-200 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6">Envoyez-nous un message</h3>
+                    
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-1">Nom complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-1">Sujet</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <div class="pt-2">
+                            <button type="submit" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                                Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="mt-16 rounded-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.5600068507!2d-6.3829455!3d32.3424435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda3678f5c1e7e3b%3A0x6e7e8a6e4b5a5b5e!2sB%C3%A9ni%20Mellal%2C%20Maroc!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-800 font-bold mr-3">
+                            GH
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Groupe Horizon</h3>
+                            <p class="text-xs text-blue-200">Pour le Renforcement des Capacités</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-200 text-sm">Association engagée dans le développement humain et local à Béni Mellal, Maroc.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-blue-200 hover:text-white transition duration-300">Accueil</a></li>
+                        <li><a href="#about" class="text-blue-200 hover:text-white transition duration-300">À propos</a></li>
+                        <li><a href="#actions" class="text-blue-200 hover:text-white transition duration-300">Nos actions</a></li>
+                        <li><a href="#news" class="text-blue-200 hover:text-white transition duration-300">Actualités</a></li>
+                        <li><a href="#contact" class="text-blue-200 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Nos actions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">Environnement</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">Jeunesse</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">Santé</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">Gestion des catastrophes</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition duration-300">Développement local</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <address class="not-italic text-blue-200 text-sm">
+                        <p class="mb-2">Béni Mellal, Maroc</p>
+                        <p class="mb-2">Email: groupehorizonmaroc@gmail.com</p>
+                        <p class="mb-2">Tél: 06 62 09 24 25</p>
+                        <a href="https://wa.me/212642191069" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full text-sm mt-2 transition duration-300">
+                            <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                        </a>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-blue-300 text-sm mb-4 md:mb-0">© 2025 Association Groupe Horizon. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-blue-300 hover:text-white transition duration-300">Mentions légales</a>
+                    <a href="#" class="text-blue-300 hover:text-white transition duration-300">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-800 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Social floating buttons -->
+    <div class="fixed bottom-8 left-8 space-y-4 z-40">
+        <a href="https://www.instagram.com/a_vengerss__?igsh=MXJjb3Npd2g0NjFhNw==" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:opacity-90 transition duration-300">
+            <i class="fab fa-instagram text-2xl"></i>
+        </a>
+        <a href="https://wa.me/212662092425" class="bg-green-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:bg-green-700 transition duration-300">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Form submission (example)
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+                this.reset();
+            });
+        });
+
+        // Member details toggle
+        document.querySelectorAll('.member-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                
+                // Hide all other details first
+                document.querySelectorAll('.member-details').forEach(detail => {
+                    if (detail.id !== targetId) {
+                        detail.classList.add('hidden');
+                    }
+                });
+                
+                // Toggle current one
+                targetElement.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
